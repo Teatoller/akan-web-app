@@ -28,13 +28,10 @@
                 alert("Please enter a valid birthdate.");
                 return;
             }
-            console.log("I have been clicked", birthdate, gender)
 
             const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             const dayOfWeekIndex = birthdate.getDay();
             const dayOfWeek = daysOfWeek[dayOfWeekIndex];
-
-            console.log("daysOfWeek...", daysOfWeek, dayOfWeekIndex, dayOfWeek)
 
             let akanName = "";
             if (gender === "male") {
@@ -86,7 +83,6 @@
                         break;
                 }
             }
-            // console.log(" akanName ..", akanName)
             document.getElementById("akanResult").innerText = `You were born on a ${dayOfWeek}, your Akan name is ${akanName}.`;
         }
     </script>
