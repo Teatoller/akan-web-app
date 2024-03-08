@@ -1,10 +1,12 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
     <title>Akan Name</title>
 </head>
+
 <body>
     <form id="akanForm">
         <label for="birthdate">Enter your birthdate:</label>
@@ -19,8 +21,71 @@
     </form>
     <script>
         function calculateAkanName() {
-            console.log("I have been clicked")
+            const birthdate = new Date(document.getElementById("birthdate").value);
+            const gender = document.getElementById("gender").value;
+
+            if (isNaN(birthdate.getTime())) {
+                alert("Please enter a valid birthdate.");
+                return;
+            }
+
+            const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const dayOfWeekIndex = birthdate.getDay();
+            const dayOfWeek = daysOfWeek[dayOfWeekIndex];
+
+            let akanName = "";
+            if (gender === "male") {
+                switch (dayOfWeekIndex) {
+                    case 0:
+                        akanName = "Kwasi";
+                        break;
+                    case 1:
+                        akanName = "Kwadwo";
+                        break;
+                    case 2:
+                        akanName = "Kwabena";
+                        break;
+                    case 3:
+                        akanName = "Kwaku";
+                        break;
+                    case 4:
+                        akanName = "Yaw";
+                        break;
+                    case 5:
+                        akanName = "Kofi";
+                        break;
+                    case 6:
+                        akanName = "Kwame";
+                        break;
+                }
+            } else if (gender === "female") {
+                switch (dayOfWeekIndex) {
+                    case 0:
+                        akanName = "Akosua";
+                        break;
+                    case 1:
+                        akanName = "Adwoa";
+                        break;
+                    case 2:
+                        akanName = "Abenaa";
+                        break;
+                    case 3:
+                        akanName = "Akua";
+                        break;
+                    case 4:
+                        akanName = "Yaa";
+                        break;
+                    case 5:
+                        akanName = "Afua";
+                        break;
+                    case 6:
+                        akanName = "Ama";
+                        break;
+                }
+            }
+            document.getElementById("akanResult").innerText = `You were born on a ${dayOfWeek}, your Akan name is ${akanName}.`;
         }
     </script>
 </body>
+
 </html>
