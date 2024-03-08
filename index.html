@@ -23,6 +23,11 @@
         function calculateAkanName() {
             const birthdate = new Date(document.getElementById("birthdate").value);
             const gender = document.getElementById("gender").value;
+
+            if (isNaN(birthdate.getTime())) {
+                alert("Please enter a valid birthdate.");
+                return;
+            }
             console.log("I have been clicked", birthdate, gender)
         }
     </script>
