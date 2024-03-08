@@ -29,6 +29,12 @@
                 return;
             }
             console.log("I have been clicked", birthdate, gender)
+
+            const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const dayOfWeekIndex = birthdate.getDay();
+            const dayOfWeek = daysOfWeek[dayOfWeekIndex];
+
+            console.log("daysOfWeek...", daysOfWeek, dayOfWeekIndex, dayOfWeek)
         }
     </script>
 </body>
