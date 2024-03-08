@@ -10,7 +10,8 @@
 <body>
     <form id="akanForm">
         <label for="birthdate">Enter your birthdate:</label>
-        <input type="date" id="birthdate" name="birthdate">
+        <input type="date" id="birthdate" name="birthdate" required>
+        <div id="birthdateError" class="error"></div>
         <label for="gender">Select your gender:</label>
         <select id="gender" name="gender">
             <option value="male">Male</option>
@@ -23,6 +24,7 @@
         function calculateAkanName() {
             const birthdate = new Date(document.getElementById("birthdate").value);
             const gender = document.getElementById("gender").value;
+            const birthdateError = document.getElementById("birthdateError");
 
             if (isNaN(birthdate.getTime())) {
                 alert("Please enter a valid birthdate.");
