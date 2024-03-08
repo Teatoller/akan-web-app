@@ -35,6 +35,58 @@
             const dayOfWeek = daysOfWeek[dayOfWeekIndex];
 
             console.log("daysOfWeek...", daysOfWeek, dayOfWeekIndex, dayOfWeek)
+
+            let akanName = "";
+            if (gender === "male") {
+                switch (dayOfWeekIndex) {
+                    case 0:
+                        akanName = "Kwasi";
+                        break;
+                    case 1:
+                        akanName = "Kwadwo";
+                        break;
+                    case 2:
+                        akanName = "Kwabena";
+                        break;
+                    case 3:
+                        akanName = "Kwaku";
+                        break;
+                    case 4:
+                        akanName = "Yaw";
+                        break;
+                    case 5:
+                        akanName = "Kofi";
+                        break;
+                    case 6:
+                        akanName = "Kwame";
+                        break;
+                }
+            } else if (gender === "female") {
+                switch (dayOfWeekIndex) {
+                    case 0:
+                        akanName = "Akosua";
+                        break;
+                    case 1:
+                        akanName = "Adwoa";
+                        break;
+                    case 2:
+                        akanName = "Abenaa";
+                        break;
+                    case 3:
+                        akanName = "Akua";
+                        break;
+                    case 4:
+                        akanName = "Yaa";
+                        break;
+                    case 5:
+                        akanName = "Afua";
+                        break;
+                    case 6:
+                        akanName = "Ama";
+                        break;
+                }
+            }
+            console.log(" akanName ..", akanName)
         }
     </script>
 </body>
